@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>AI Autocomplete Settings</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <h1>AI Text Autocomplete</h1>
+
+  <label class="toggle-row">
+    <span>Enabled</span>
+    <input type="checkbox" id="enabled" />
+  </label>
+
+  <label for="apiKey">OpenRouter API key</label>
+  <input type="password" id="apiKey" placeholder="sent from OpenRouter API" autocomplete="off" />
+
+  <label for="model">Model</label>
+  <select id="model">
+  <option value="openai/gpt-4o-mini">GPT-4o Mini</option>
+</select>
+
+  <button id="save">Save</button>
+  <p id="status"></p>
+
+  <p class="hint">
+    Your key is stored locally via <code>chrome.storage.sync</code> and is only ever
+    sent from the extension's background worker directly to
+    <code>openrouter.ai</code>.
+  </p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+#__ai_autocomplete_overlay__ {
+  position: fixed;
+  color: rgba(120, 120, 120, 0.85);
+  pointer-events: none;
+  white-space: pre;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  display: none;
+  z-index: 2147483647;
+  will-change: left, top;
+}
+
+#__ai_autocomplete_mirror__ {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  visibility: hidden;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
